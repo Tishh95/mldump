@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Ce contenu est-il mauvais ?</title>
+</head>
+<body>
 
-        {% for table in tables %}
-                    {{titles[loop.index]}}
-                    {{ table|safe }}
-        {% endfor %}
-    </body>
+
+    <form action="/" method="POST">
+        <input type="text" name="t" value={{t}}>
+        <input type="submit" value="test">
+    </form> <br>
+    {% if type != -1 : %}
+        <p>{{type}}</p>
+    {% endif %}
+</body>
 </html>
